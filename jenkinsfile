@@ -36,16 +36,16 @@ pipeline {
                  bat 'python -m unittest test_ops.py'
             }
         }
-        stage('Report'){
-            steps{
-                  bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
-            }
-            post{
-                always{
-                    junit allowEmptyResults: true, testResults: 'reports/unit_tests.xml'
-                }
-            }
-        }
+        // stage('Report'){
+        //     steps{
+        //           bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
+        //     }
+        //     post{
+        //         always{
+        //             junit allowEmptyResults: true, testResults: 'reports/unit_tests.xml'
+        //         }
+        //     }
+        // }
         
     }
     post{
