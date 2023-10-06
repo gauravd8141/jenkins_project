@@ -2,26 +2,31 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building the application ...'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing the application'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the application'
-            }
-        }
-        stage('Jenkins Python')
+        // stage('Build') {
+        //     steps {
+        //         echo 'Building the application ...'
+        //     }
+        // }
+        // stage('Test') {
+        //     steps {
+        //         echo 'Testing the application'
+        //     }
+        // }
+        // stage('Deploy') {
+        //     steps {
+        //         echo 'Deploying the application'
+        //     }
+        // }
+        stage('Jenkins Python code')
         {
             steps {
                 bat 'python ops.py'
-                
+
+            }
+        }
+        stage('python test'){
+            steps{
+                bat 'python test_ops.py'
             }
         }
     }
