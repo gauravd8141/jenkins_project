@@ -32,7 +32,7 @@ pipeline {
         // stage('python test'){
         //     steps{
         //         // bat 'python -m pytest'
-        //         // bat 'python unit-test.py'
+                // bat 'python unit-test.py'
         //          bat 'python -m unittest test_ops.py'
         //     }
         // }
@@ -42,14 +42,14 @@ pipeline {
 
             steps{
 
-                // bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
-                bat 'python -m unittest test_ops.py'
+                bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
+                // bat 'python -m unittest test_ops.py'
             }
 
             post{
                 always{
-                    junit '88/test-reports.xml'
-                    // junit allowEmptyResults: true, testResults: 'reports/unit_tests.xml'
+                    // junit '88/test-reports.xml'
+                    junit allowEmptyResults: true, testResults: 'reports/unit_tests.xml'
                 }
 
                 success{
