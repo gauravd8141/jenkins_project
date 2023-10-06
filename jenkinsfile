@@ -32,8 +32,8 @@ pipeline {
         stage('python test'){
             steps{
                 // bat 'python -m pytest'
-                // bat 'python unit-test.py'
-                 bat 'python -m unittest test_ops.py'
+                bat 'python unit-test.py'
+                //  bat 'python -m unittest test_ops.py'
             }
         }
         // stage('Report'){
