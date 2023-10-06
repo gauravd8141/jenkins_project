@@ -17,17 +17,17 @@ pipeline {
         //         echo 'Deploying the application'
         //     }
         // }
-        stage('Jenkins Python code')
-        {
-            steps {
-                bat 'python ops.py'
+        // stage('Jenkins Python code')
+        // {
+        //     steps {
+        //         bat 'python ops.py'
 
-            }
-        }
+        //     }
+        // }
         stage('python test'){
             steps{
                 // bat 'python -m pytest'
-                bat 'python test_ops.py'
+                bat 'python unit-test.py'
             }
         }
     }
