@@ -30,5 +30,34 @@ pipeline {
                 bat 'python unit-test.py'
             }
         }
+        
+    }
+    post{
+        always{
+            echo "Hi Gaurav, Email from pipeline"
+        }
+        success{
+
+            echo "pipeline execution passed "
+
+            mail to : "gauravdeshmukh7083@gmail.com",
+
+            subject : "Pipeline Completed",
+
+            body : "Pipeline Completetd "
+
+        }
+
+        failure{
+
+            echo "pipeline execution failed"
+
+            mail to : "gauravdeshmukh7083@gmail.com",
+
+            subject : "Pipeline Failed",
+
+            body : "Pipeline Failed"
+
+        }
     }
 }
