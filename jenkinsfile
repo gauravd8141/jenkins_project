@@ -17,11 +17,6 @@ pipeline {
                 echo 'Deploying the application'
             }
         }
-        stage('Jenkins Python')
-        {
-            steps {
-                sh 'python myfile.py'
-            }
-        }
+      
     }
 }
