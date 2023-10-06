@@ -20,7 +20,8 @@ pipeline {
         stage('Jenkins Python')
         {
             steps {
-                bat 'python myfile.py'
+                bat 'python ops.py'
+                
             }
         }
     }
