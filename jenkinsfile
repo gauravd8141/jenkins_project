@@ -40,6 +40,11 @@ pipeline {
             steps{
                   bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
             }
+            post{
+                always{
+                    junit allowEmptyResults: true, testResults: 'reports/unit_tests.xml'
+                }
+            }
         }
         
     }
