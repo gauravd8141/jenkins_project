@@ -26,7 +26,8 @@ pipeline {
         }
         stage('python test'){
             steps{
-                bat 'python test_ops.py'
+                bat 'python -m pytest'
+                // bat 'python test_ops.py'
             }
         }
     }
