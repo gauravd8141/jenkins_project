@@ -14,9 +14,14 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying the application ....'
+                echo 'Deploying the application'
             }
         }
-      
+        stage('Jenkins Python')
+        {
+            steps {
+                bat 'python myfile.py'
+            }
+        }
     }
 }
