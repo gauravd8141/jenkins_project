@@ -51,6 +51,8 @@ pipeline {
     //                 junit allowEmptyResults: true, testResults: 'reports/unit_tests.xml'
     //             }
     // }
+    // }
+    }
     post{
         always{
             echo "Hi Gaurav, Email from pipeline"
@@ -81,6 +83,6 @@ pipeline {
     }
         
 }
-    }
+    // }
 // }
     
