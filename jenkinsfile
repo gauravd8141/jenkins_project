@@ -38,21 +38,21 @@ pipeline {
                 //  bat 'python -m unittest test_ops.py'
             }
         }
-    //  stage ("Test Report Generation")
+     stage ("Test Report Generation")
 
-    //     {
+        {
 
-    //         steps{
-    //             bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
-    //         }
+            steps{
+                bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
+            }
 
-    //         post{
-    //             always{
-    //                 junit allowEmptyResults: true, testResults: 'reports/unit_tests.xml'
-    //             }
-    // }
-    // }
+            post{
+                always{
+                    junit allowEmptyResults: true, testResults: 'reports/unit_tests.xml'
+                }
+            }
     }
+}
     post{
         always{
             echo "Hi Gaurav, Email from pipeline"
