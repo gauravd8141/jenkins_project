@@ -31,19 +31,19 @@ pipeline {
         //         bat 'python -m py_compile ops.py'
         //     }
         // }
-        stage('python test'){
-            steps{
-                // bat 'python -m pytest'
-                // bat 'python unit-test.py'
-                 bat 'python -m unittest test_ops.py'
-            }
-        }
+        // stage('python test'){
+        //     steps{
+        //         // bat 'python -m pytest'
+        //         // bat 'python unit-test.py'
+        //          bat 'python -m unittest test_ops.py'
+        //     }
+        // }
      stage ("Test Report Generation")
 
         {
 
             steps{
-                // bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
+                bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
             }
 
             post{
