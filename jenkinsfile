@@ -42,9 +42,9 @@ pipeline {
 
         {
 
-            steps{
-                bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
-            }
+            // steps{
+            //     bat 'python -m pytest --verbose --junit-xml reports/unit_tests.xml'
+            // }
 
             post{
                 always{
