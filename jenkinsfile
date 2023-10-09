@@ -38,7 +38,7 @@ pipeline {
         //          bat 'python -m unittest test_ops.py'
         //     }
         // }
-     stage ("Test Report Generation")
+     stage ("Test_report")
 
         {
 
