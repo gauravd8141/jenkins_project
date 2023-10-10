@@ -19,11 +19,7 @@ pipeline {
         //     echo 'Hi Sabarish'
         //     }
         // }
-        // stage('') {
-        //     steps {
-        //         echo 'Deploying the application'
-        //     }
-        // }
+      
         // stage('Jenkins Python code')
         // {
         //     steps {
