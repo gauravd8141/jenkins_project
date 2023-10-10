@@ -14,11 +14,7 @@ pipeline {
                 echo 'Pipeline is working'
             }
         }
-        // stage("print"){
-        //     steps{
-        //     echo 'Hi Sabarish'
-        //     }
-        // }
+        
       
         // stage('Jenkins Python code')
         // {
